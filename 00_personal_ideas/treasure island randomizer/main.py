@@ -62,13 +62,13 @@ if direction in possible_direction:
                     else:
                         print(f"Sorry... Game Over!!!!\n{choice(jungle_outcome.weather_disasters())["description"]}")
                 else:
-                    print("Sorry...\nGame Over!!!! Invalid entry")
+                    print("Sorry...\nGame Over!!!! Invalid entry.")
 
             else:
                 print(f"Sorry... Game Over!!!!\n{choice(jungle_outcome.survival_challenges())["description"]}")
         else:
-            print("Sorry...\nGame Over!! Invalid entry")
+            print("Sorry...\nGame Over!! Invalid entry.")
     else:
         print(f"Game Over!!!!\n{choice(jungle_outcome.environmental_dangers())["description"]}")
 else:
-    print("Invalid entry")
+    print("Invalid entry.")
