@@ -11,6 +11,7 @@ def colored_text(text, color_code):
     return f"\033[{color_code}m{text}\033[0m"
 
 
+
 # This function display the diagram in relation to the program input
 def print_appropriate_diagram(diagram, value):
     # rock = 0
@@ -38,26 +39,53 @@ def game_result(user, computer):
     # Paper wins against rock.
 
     result = ""
-    correct_response = colored_text("You win!!", "32")
-    incorrect_response = colored_text("You lose!!", "31")
 
-
+    # colored_text("Draw!!", color_code)
+    # colored_text("You win!!", "31")
+    # colored_text("You lose!!", "32")
     if user == computer:
         result = colored_text("DRAW!!", "33")
 
     elif user == 0 and computer == 2:
-        result = correct_response
+        result = colored_text("You win!!", "32")
     elif user == 2 and computer == 0:
-        result = incorrect_response
+        result = colored_text("You lose!!", "31")
 
     elif user == 2 and computer == 1:
-        result = correct_response
+        result = colored_text("You win!!", "32")
     elif user == 1 and computer == 2:
-        result = incorrect_response
+        result = colored_text("You lose!!", "31")
 
     elif user == 1 and computer == 0:
-        result = correct_response
+        result = colored_text("You win!!", "32")
     elif user == 0 and computer == 1:
-        result = incorrect_response
+        result = colored_text("You lose!!", "31")
+
+    return result
+
+# This function display the diagram in relation to the program input
+# and shows them beside each other (UNDER-DEVELOPMENT)
+def modified_print_appropriate_diagram(diagram, value, player):
+    # rock = 0
+    # paper = 1
+    # scissors = 2
+
+    result = ""
+
+    if player == "user":
+        if value == 0:
+            result = diagram.user_rock
+        elif value == 1:
+            result = diagram.user_paper
+        elif value == 2:
+            result = diagram.user_scissor
+
+    elif player == "computer":
+        if value == 0:
+            result = diagram.computer_rock
+        elif value == 1:
+            result = diagram.computer_paper
+        elif value == 2:
+            result = diagram.computer_scissor
 
     return result
