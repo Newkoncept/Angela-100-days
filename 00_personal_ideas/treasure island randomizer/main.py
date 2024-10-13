@@ -14,7 +14,7 @@
     The game doesn't have a predefined value as the correct answer is defined by
     the program based on a value chosen from a random selection of the program.
 """
-from random import randint, choice
+from random import random, choice
 import jungle_outcome
 
 print('''*******************************************************************************
@@ -43,18 +43,18 @@ possible_direction = ["left", "right"]
 possible_action = ["swim", "wait"]
 possible_door = ["red", "blue", "yellow"]
 
-random_direction = possible_direction[(randint(0, len(possible_direction)))]
+random_direction = possible_direction[(int(random() * len(possible_direction)))]
 
 direction = input("Where do you want to go? Left or Right\n").lower()
 if direction in possible_direction:
     if direction == random_direction:
 
-        random_action = possible_action[(randint(0,  len(possible_action)))]
+        random_action = possible_action[(int(random() * len(possible_action)))]
         action = input("Congratulations!!\nWhat do you want to do next? Swim or wait\n").lower()
         if action in possible_action:
             if action == random_action:
 
-                random_door = possible_door[(randint(0, len(possible_door)))]
+                random_door = possible_door[(int(random() * len(possible_door)))]
                 door = input("Congratulations!!\nWhich door do you want to take? Red, Blue, Yellow\n").lower()
                 if door in possible_door:
                     if door == random_door:
