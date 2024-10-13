@@ -43,7 +43,6 @@ possible_direction = ["left", "right"]
 possible_action = ["swim", "wait"]
 possible_door = ["red", "blue", "yellow"]
 
-# randint(0,
 random_direction = possible_direction[(randint(0, len(possible_direction)))]
 
 direction = input("Where do you want to go? Left or Right\n").lower()
