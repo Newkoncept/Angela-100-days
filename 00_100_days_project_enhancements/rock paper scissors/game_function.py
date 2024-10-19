@@ -1,15 +1,14 @@
 def colored_text(text, color_code):
     # Color codes
-    # RED = '31'
-    # GREEN = '32'
-    # YELLOW = '33'
-    # BLUE = '34'
-    # MAGENTA = '35'
-    # CYAN = '36'
-    # WHITE = '37'
+        # RED = '31'
+        # GREEN = '32'
+        # YELLOW = '33'
+        # BLUE = '34'
+        # MAGENTA = '35'
+        # CYAN = '36'
+        # WHITE = '37'
 
     return f"\033[{color_code}m{text}\033[0m"
-
 
 
 # This function display the diagram in relation to the program input

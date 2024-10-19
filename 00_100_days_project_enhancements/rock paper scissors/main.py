@@ -1,13 +1,14 @@
+import getpass
 from random import randint
 import diagram, game_function
 
 '''
 TODO:::
 
-Two player, Playing against the computer
-Hiding user input to prevent cheating
+** Two player, Playing against the computer
+** Hiding user input to prevent cheating
 Adding congratulatory gif or ascii art
-Making the diagram show beside each other
+** Making the diagram show beside each other
 
 '''
 game_plan = int(input("""Welcome to the game!!!
@@ -19,17 +20,18 @@ if game_plan > 2 or game_plan < 1:
     print(f"\nError: Invalid entry!!!!")
 else:
     if game_plan == 1:
-        user1_choice = int(input("""User 1 Player: What do you choose?
+        print("Welcome")
+        user1_choice = int(getpass.getpass("""User 1 Player: What do you choose?
         Type
         0 for Rock
         1 for Paper
-        2 for Scissors\n"""))
+        2 for Scissors\n(Press the Enter key after making your choice)\n"""))
 
-        user2_choice = int(input("""User 2 Player: What do you choose?
+        user2_choice = int(getpass.getpass("""User 2 Player: What do you choose?
         Type
         0 for Rock
         1 for Paper
-        2 for Scissors\n"""))
+        2 for Scissors\n(Press the Enter key after making your choice)\n"""))
 
         if user1_choice > 2 or user1_choice < 0 :
             print(f"\nError: User 1 entered an invalid entry!!!!")
