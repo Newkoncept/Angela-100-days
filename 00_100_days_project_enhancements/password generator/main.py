@@ -1,8 +1,8 @@
 import random, password_content
 
 """
-Randomize 3 three times
-Show the final password
+* Randomize 3 three times
+* Show the final password
 Show the total length of generated values
 
 Advance:
@@ -32,6 +32,7 @@ print(generated_value)
 
 final_password = ''.join(generated_value)
 print(f"Your password is: {final_password}")
+print(f"Your total password length is: {len(final_password)}")
 
 
 
