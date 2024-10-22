@@ -4,7 +4,7 @@ picked_word = list(random.choice(hangman_words.words))
 picked_word_length = len(picked_word)
 guessed_list = []
 
-print(picked_word)
+# print(picked_word)
 total_lives, life_remaining, is_active = functions.set_default_game_value()
 
 functions.welcome_message(total_lives)
