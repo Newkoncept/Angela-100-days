@@ -1,0 +1,1 @@
+words = ['elephant', 'australia', 'soccer', 'lavender']
