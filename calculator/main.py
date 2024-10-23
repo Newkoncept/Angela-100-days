@@ -26,5 +26,3 @@ while True:
         new_calculation = False
     else:
         new_calculation = True
-
-
