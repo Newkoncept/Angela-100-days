@@ -20,12 +20,18 @@ def generate_question():
     return [final_content, question["followers_count"]]
 
 
-def generate_all_questions():
+def generate_all_questions(first_run, previous_question):
     """This functions return all the necessary questions for processing,
     and it also performs error checking to prevent the display of the same question
     at the same time"""
-    first_question = generate_question()
-    second_question = generate_question()
+
+    if first_run:
+        first_question = generate_question()
+        second_question = generate_question()
+    else:
+        first_question = previous_question
+        second_question = generate_question()
+
 
     while first_question[0] == second_question[0]:
         second_question = generate_question()
