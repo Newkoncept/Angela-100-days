@@ -30,6 +30,9 @@ def generate_all_questions():
     while first_question[0] == second_question[0]:
         second_question = generate_question()
 
+    while first_question[1] == second_question[1]:
+        second_question = generate_question()
+
     return [first_question, second_question]
 
 
