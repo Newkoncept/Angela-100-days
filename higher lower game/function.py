@@ -17,6 +17,17 @@ def generate_question():
     return [final_content, question["followers_count"]]
 
 
+def generate_all_questions():
+    first_question = generate_question()
+    second_question = generate_question()
+
+    while first_question[0] == second_question[0]:
+        second_question = generate_question()
+
+    return [first_question, second_question]
+
+
+
 def display_question(first_run, first_question, second_question, score):
     print(art.logo)
 
